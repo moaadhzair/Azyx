@@ -154,7 +154,7 @@ class AniListProvider with ChangeNotifier {
 
     const query = '''
     query GetUserAnimeList(\$userId: Int) {
-      MediaListCollection(userId: \$userId, type: ANIME) {
+      MediaListCollection(userId: \$userId, type: ANIME, sort: UPDATED_TIME_DESC) {
         lists {
           name
           entries {
